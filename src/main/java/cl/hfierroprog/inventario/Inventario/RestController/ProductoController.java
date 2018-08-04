@@ -5,12 +5,13 @@ import cl.hfierroprog.inventario.Inventario.service.ProductoService;
 import cl.hfierroprog.inventario.Inventario.service.vo.ProductoResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin
+@CrossOrigin(allowedHeaders = HttpHeaders.ACCEPT)
 public class ProductoController {
 
     @Autowired
@@ -24,5 +25,10 @@ public class ProductoController {
     @GetMapping("/getProductos")
     public Object getProductos(Pageable pageable) {
         return productoService.getProductos(pageable);
+    }
+
+    @GetMapping("/getCantidadProductos")
+    public Object getCantidadProductos() {
+        return productoService.getCantidadProductos();
     }
 }

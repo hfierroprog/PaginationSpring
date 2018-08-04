@@ -51,4 +51,9 @@ public class ProductoServiceImpl implements ProductoService {
     public Page<Producto> getProductos(Pageable pageable) {
         return productoDao.findAll(pageable);
     }
+
+    @Override
+    public Long getCantidadProductos() {
+        return productoDao.count();
+    }
 }

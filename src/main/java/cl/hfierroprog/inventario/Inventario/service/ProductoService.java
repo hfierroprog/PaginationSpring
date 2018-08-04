@@ -10,4 +10,6 @@ public interface ProductoService {
     ProductoResponse agregarProducto(Producto producto);
 
     Page<Producto> getProductos(Pageable pageable);
+
+    Long getCantidadProductos();
 }

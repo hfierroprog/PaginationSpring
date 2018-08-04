@@ -3,7 +3,6 @@ package cl.hfierroprog.inventario.Inventario.RestController;
 import cl.hfierroprog.inventario.Inventario.Entity.Categoria;
 import cl.hfierroprog.inventario.Inventario.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
